@@ -1,17 +1,16 @@
 import React, { useMemo } from 'react';
 import useSWR from 'swr';
 import { fetcher } from 'helpers';
-import { ChallengeApiResponse } from 'types';
-import {CardGrid, GridProps} from 'components/CardGrid';
+import { ChallengeApiResponse, ChallengeCard } from 'types';
+import {CardGrid } from 'components/CardGrid';
 
 interface Props {}
 
-type GridData = GridProps["data"];
 
 export const ChallengeCards: React.FC<Props> = (props) => {
     const { data, error } = useSWR<ChallengeApiResponse>('https://dev.ntvr.co/react-challenge-api/data.json', fetcher);
 
-    const condensedData: GridData = useMemo(() => {
+    const condensedData: ChallengeCard[] = useMemo(() => {
         if (!data) return [];
         const { images, data: cardData } = data;
 
