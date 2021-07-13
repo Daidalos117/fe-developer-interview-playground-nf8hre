@@ -48,3 +48,25 @@ export const StyledHeading = styled.h3`
 export const StyledDescription = styled.p`
     margin: 0;
 `;
+
+
+export const StyledGrid = styled.div<{ columns: number | undefined }>`
+    display: grid;
+    grid-template-columns: repeat(${(props) => props.columns || 3}, 300px);
+    grid-gap: 20px;
+`;
+
+export const StyledCenter = styled.div`
+    text-align: center;
+    margin: 60px;
+`;
+
+export const StyledButton = styled.button`
+    font-size: 20px;
+    background-color: #01937c;
+    color: #faf1e6;
+    border-radius: 0;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+`;

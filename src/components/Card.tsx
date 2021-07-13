@@ -8,7 +8,7 @@ import {
     StyledClose,
 } from 'components/styled';
 import { ChallengeCard } from 'types';
-import { StyledButton } from 'components/CardGrid';
+import { StyledButton } from 'components/styled';
 
 export type CardProps = Omit<ChallengeCard, 'id'> & { onHideClick: Function };
 
