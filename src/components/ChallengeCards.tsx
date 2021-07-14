@@ -16,6 +16,7 @@ export const StyledSearch = styled.div`
         margin-bottom: 20px;
         font-size: 20px;
         width: 100%;
+        box-sizing: border-box;
     }
 `;
 
